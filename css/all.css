@@ -1,0 +1,79 @@
+/* Универсальный селектор */
+*{
+  /*color: green;*/
+}
+/* Селекторы элементов (тегов) */
+p{
+  color: #f00;
+}
+li{
+  color: red;
+}
+a{
+  color: cadetblue;
+}
+td{
+  background-color: bisque;
+}
+/* Селекторы атрибутов */
+[title]{
+  background-color: bisque;
+}
+[href="#sect1"]{
+  color: aquamarine;
+}
+[href^="http"]{
+  border: 2px dashed #f00;
+}
+/* Гиперссылки заканчиваются на .pdf */
+[href$=".avi"],
+[href$=".pdf"]{
+  display: inline-block;
+  font-size: 34px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 128px;
+  /*padding-left: 128px;*/
+}
+[href$=".pdf"]{
+  background-image: url("../img/filetype_pdf.png");
+}
+[href$=".avi"]:before{
+  content: "";
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  float:left;
+  background: url("../img/avi_sprite.png") no-repeat left top;
+}
+[href$=".avi"]:hover:before{
+  background-position: left bottom;
+}
+[title*="первый"]:before{
+  content:"!";
+  font-size: 45px;
+  display: block;
+}
+/* Селекторы класса */
+.odd{
+  background-color: lightblue;
+  color: blue;
+}
+/* Селекторы псевдоклассов */
+input:focus{
+  background-color: lightgreen;
+}
+td:hover{
+  background-color: aquamarine;
+}
+tr:last-child td:last-child{
+  background-color: #f00;
+}
+/* Селектор идентификатора */
+#last{
+  color: #777;
+}
+img#unique{
+  max-width: 200px;
+  max-height: 50px;
+}
