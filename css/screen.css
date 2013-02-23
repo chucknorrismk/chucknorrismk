@@ -1,10 +1,14 @@
 *{
   font-family: Arial, Verdana, sans-serif;
 }
+body{
+}
 #wrapper{
-  width: 1024px;
+  width: 964px;
   border: 1px solid red;
   margin: 0px auto;
+  padding: 0px 60px 35px 0px;
+  background: url("../img/top_bg.png") 170px 100px no-repeat;
 }
 #header{
   height: 75px;
@@ -16,7 +20,6 @@
 }
 #top_menu{
   float: right;
-  padding-right: 60px;
 }
 #top_menu a{
   text-decoration: none;
@@ -26,36 +29,99 @@
 }
 #top_menu li{
   display: inline-block;
+}
+#top_menu .common_menu a{
+  color: #b2b2b2;
+  font-size: 11px;
+}
+#top_menu .main_menu{
+  position: relative;
+}
+#top_menu .main_menu a{
+  color: #5c5c5c;
+  font-size: 15px;
+}
+#top_menu .main_menu .current a,
+#top_menu .main_menu li:hover a{
+  color: #6A95C1;
   
 }
-#top_menu > .main_menu > li:before{
+
+#top_menu > .main_menu > li{
+  min-width: 145px;
+  text-align: center;
+  border-left: 1px solid #D4E6F8;
+  height: 10px;
+  /*position: relative;*/
+}
+#top_menu > .main_menu > li>a{
+  display: block;
+  height: 100%;
+  position: relative;
+  top:-3px;
+}
+/*#top_menu > .main_menu > li:before{
   content: "";
   border-left: 1px solid #D4E6F8;
   display: inline-block;
   height: 10px;
-}
-#top_menu > .main_menu > li:first-child:before{
+}*/
+#top_menu > .main_menu > li:first-child{
   border: none;
+}
+#top_menu>ul,
+#top_menu .submenu{
+  padding: 0px;
+}
+#top_menu .submenu{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -23px;
+  background-color: #D4E6F8;
+  display: none;
+  padding: 3px 12px;
+  border-radius: 7px;
+}
+#top_menu .submenu a{
+  color: #1C67A8;
+}
+#top_menu .submenu li:hover>a,
+#top_menu .submenu a.current{
+  color: #042F55;
+}
+#top_menu > .main_menu li:hover>.submenu{
+  display: block;
 }
 #middle{
   clear: both;
 }
 #sidebar{
+  margin-top: 90px;
   width: 200px;
   float: left;
-  border: 1px solid blue;
+  border: 10px solid #8AC1E9;
+  border-left: none;
+  background-color: white;
+  border-radius: 0px 100px 100px 0px;
+  padding: 35px 0px 90px;
+  min-height: 333px;
 }
 #sidebar > h2{
   background: #74B9EC url("../img/curr_page_header_bg_c.png") top left repeat-x;
   text-align: right;
   padding: 2px 2px 2px;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: normal;
   line-height: 57px;
   text-transform: uppercase;
   color: rgb(255,255,255);
-  margin: 0px 15px;
+  margin: 0px 30px 0px 15px;
   position: relative;
   vertical-align: middle;
+}
+#sidebar > h2:hover{
+  text-shadow: 0px 0px 3px white, 0px 0px 5px white, 0px 0px 9px white, 0px 0px 15px white;
 }
 #sidebar > h2:before,
 #sidebar > h2:after{
@@ -85,8 +151,58 @@
   padding-left: 100px;
 }
 #content{
-  
+  margin-left: 150px;
+  padding-top: 220px;
 }
+#content .breadcrambs{
+  float: right;
+}
+#content .breadcrambs *,
+#page_title>.description{
+  font-size: 12px;
+}
+#content .breadcrambs a{
+  font-weight: normal;
+  color: #ADADAD;
+  text-decoration: none;
+}
+#content .breadcrambs a:hover{
+  text-decoration: underline;
+}
+#content .breadcrambs li{
+  display: inline-block;
+  font-weight: bold;
+  color: #676767;
+}
+
+#content .breadcrambs li:before{
+  content: ">";
+}
+#content .breadcrambs li:first-child:before{
+  content: "";
+}
+#page_title{
+  background: url("../img/page_title_bg.png") left top no-repeat;
+  padding-left: 10px;
+  margin: 0px 0px 10px 80px;
+}
+#page_title h2{
+  font-size: 16px;
+  line-height: 16px;
+  padding: 2px 0px;
+  margin: 2px 0px;
+  color: #50504F;
+}
+#page_title .description{
+  color: #777;
+}
+#main_content{
+  border: 10px #84BDE7 solid;
+  border-radius: 100px;
+  height: 1000px;
+  padding: 40px 30px 25px 75px;
+}
+
 #footer{
   clear: both;
 }

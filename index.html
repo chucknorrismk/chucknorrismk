@@ -35,30 +35,40 @@
             </li>
           </ul>
           <ul class="main_menu">
-            <li>
-              <a href="#">
-                Company
-              </a>
+            <li class="current"><a href="#">Company</a>
+              <!--Zen Coding -> ul.submenu>li*7>a[href="#"]{news$}-->
+              <ul class="submenu">
+                <li><a href="#">News</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">news4</a></li>
+                <li><a href="#">news5</a></li>
+                <li><a href="#">news6</a></li>
+                <li><a href="#">news7</a></li>
+              </ul>
             </li>
-            <li>
-              <a href="#">
-                Forum
-              </a>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Gallery</a>
+              <ul class="submenu">
+                <li><a href="#">Gallery1</a></li>
+                <li><a href="#">Gallery2</a>
+                  <ul class="submenu">
+                    <li><a href="#">Gallery2.1</a></li>
+                    <li><a href="#">Gallery2.2</a></li>
+                    <li><a href="#">Gallery2.3</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Gallery3</a></li>
+                <li><a href="#">Gallery4</a></li>
+              </ul>
             </li>
-            <li>
-              <a href="#">
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Price List
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Support
-              </a>
+            <li><a href="#">Price List</a></li>
+            <li><a href="#">Support</a>
+              <ul class="submenu">
+                <li><a href="#">Support 1</a></li>
+                <li><a href="#">Support 2</a></li>
+                <li><a href="#">Support 3</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -73,7 +83,20 @@
           </ul>
         </div>
         <div id="content">
-          Основной контент страницы
+          <ul class="breadcrambs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Company</a></li>
+            <li>Contacts</li>
+          </ul>
+          <div id="page_title">
+            <h2>Contacts</h2>
+            <div class="description">
+              Свяжитесь с нами
+            </div>
+          </div>
+          <div id="main_content">
+            Основной контент страницы
+          </div>
         </div>
       </div>
       <div id ="footer">
