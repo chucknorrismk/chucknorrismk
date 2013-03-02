@@ -77,3 +77,57 @@ img#unique{
   max-width: 200px;
   max-height: 50px;
 }
+/* Accordion */
+.accordion{
+  height: 200px;
+  width: 1000px;
+  position: relative;
+}
+#acc1 .accordion-item{
+  float: left;
+}
+#acc2 .accordion-item,
+#acc1 .accordion-item{
+  width: 200px;
+  /*height: 100%;*/
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+#acc2 .accordion-item{
+  position: fixed;
+  bottom: 0px;
+}
+#acc2 #ai1{
+  left: 0px;
+}
+#acc2 #ai2{
+  left: 200px;
+}
+#acc2 #ai3{
+  left: 400px;
+  top:0px;
+  height: 200px;
+}
+#acc2 #ai4{
+  right: 0px;
+}
+.accordion-item-content{
+  height: 100%;
+  width: 600px;
+  color: white;
+}
+#ai1>.accordion-item-content{
+  background-color: red;
+}
+#ai2>.accordion-item-content{
+  background-color: green;
+}
+#ai3>.accordion-item-content{
+  background-color: blue;
+}
+#ai4>.accordion-item-content{
+  background-color: #777;
+}
+
+/* ********* */
