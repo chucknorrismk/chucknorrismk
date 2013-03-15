@@ -5,277 +5,285 @@
   после его подключения посреди или вконце (верстки)
 */
 /* @import url("reset.css"); */
-*{
-  font-family: Arial, Verdana, sans-serif;
+
+*{/* правило для всех элементов */
+  font-family: Arial, Verdana, sans-serif;/* шрифты и семейства шрифтов */
 }
-body{
+body{/* правило для body */
+  /* цвет фон, фоновая картинка (по умолчанию: расположена слева и сверху, а также замащивается ) */
   background: #8ac1e9 url("../img/bg.png");
 }
-#wrapper{
-  width: 964px;
-  margin: 0px auto;
-  padding: 0px 60px 35px 0px;
-  background: white url("../img/top_bg.png") 170px 100px no-repeat;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.9);
+a img{/* все картинки-ссылки */
+  border: none; /* убираем рамку */
 }
-#header{
-  height: 75px;
-  padding-left: 60px;
+#wrapper{/* блок-обертка страницы */
+  width: 964px;/* ширина */
+  margin: 0px auto;/* горизонтальное центрирование блока с помощью отступов */
+  padding: 0px 60px 35px 0px;/* поля (внутренние отступы) */
+  background: white url("../img/top_bg.png") 170px 100px no-repeat;/* параметры фона */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.9);/* тень блока */
 }
-#header .logo{
-  margin-top: 35px;
-  display: inline-block
+#header{/* блок - заголовок страницы */
+  height: 75px;/* высота */
+  padding-left: 60px;/* левое поле (внутренний отступ) */
 }
-#top_menu{
-  float: right;
+#header .logo{/* ссылка на логотипе */
+  margin-top: 35px;/* верхний отступ */
+  display: inline-block;/* элемен строчно-блочный */
 }
-#top_menu a{
-  text-decoration: none;
+#top_menu{/* верхнее меню */
+  float: right;/* плавающий справа */
 }
-#top_menu > ul{
-  text-align: right;
+#top_menu a{/* ссылки в верхнем меню */
+  text-decoration: none;/* убираем подчеркивание */
 }
-#top_menu li{
-  display: inline-block;
+#top_menu > ul{/* все меню в блоке верхнего меню */
+  text-align: right;/* располагаем справа  */
 }
-.common_menu a{
-  color: #b2b2b2;
-  font-size: 11px;
+#top_menu li{/* пункты верхних меню */
+  display: inline-block;/* элемен строчно-блочный */
 }
-#top_menu .main_menu{
-  position: relative;
+.common_menu a{/* ссылки в общем меню */
+  color: #b2b2b2;/* цвет текста */
+  font-size: 11px;/* размер шрифта */
 }
-#top_menu .main_menu a{
-  color: #5c5c5c;
-  font-size: 15px;
+#top_menu .main_menu{/* главное меню в верхних меню */
+  /* устанавливаем ему относительное позиционирование, */
+  /* чтобы выпадающие меню позиционировались относительно него */
+  position: relative;/* относительное позиционирование */
 }
-#top_menu .main_menu .current a,
-#top_menu .main_menu li:hover a{
-  color: #6A95C1;
+#top_menu .main_menu a{/* ссылки главного меню */
+  color: #5c5c5c;/* цвет текста */
+  font-size: 15px;/* размер шрифта */
+}
+#top_menu .main_menu .current a,/* ссылка текущего пункта главного меню в верхних меню */
+#top_menu .main_menu li:hover a{/* ссылка пункта по курсором мыши главного меню в верхних меню */
+  color: #6A95C1;/* цвет текста */
+}
 
+#top_menu > .main_menu > li{/* пункты главного меню верхних меню */
+  min-width: 145px;/* минимальная ширина */
+  text-align: center;/* выравнивание текста по-центру */
+  border-left: 1px solid #D4E6F8;/* левая рамка */
+  height: 10px;/* высота */
+}
+#top_menu > .main_menu > li>a{/* ссылка пункта главного меню верхних меню */
+/* отображение строчного элемена (ссылки) как блочного */
+/*(для того, чтобы установить ширину и высоту) */  
+  display: block;
+  height: 100%;/* высота  */
+  position: relative;/* относительное позиционирование (чтобы сместить немного вверх) */
+  top:-3px;/* смещение вверх на 3px */
 }
 
-#top_menu > .main_menu > li{
-  min-width: 145px;
-  text-align: center;
-  border-left: 1px solid #D4E6F8;
-  height: 10px;
-  /*position: relative;*/
+#top_menu > .main_menu > li:first-child{/* первый элемент главного меню верхних меню */
+  border: none;/* убираем рамку */
 }
-#top_menu > .main_menu > li>a{
-  display: block;
-  height: 100%;
-  position: relative;
-  top:-3px;
+#top_menu>ul,/* списки (меню) в верних меню */
+#top_menu .submenu{/* подменю в верхних меню */
+  padding: 0px;/* обнуление полей */
 }
-/*#top_menu > .main_menu > li:before{
-  content: "";
-  border-left: 1px solid #D4E6F8;
-  display: inline-block;
-  height: 10px;
-}*/
-#top_menu > .main_menu > li:first-child{
-  border: none;
+#top_menu .submenu{/* подменю верхних меню */
+  position: absolute;/* абсолютное позиционирование */
+  left: 0px;/* отступ от левой границы родительского меню */
+  right: 0px;/* отступ от правой границы родительского меню */
+  bottom: -23px;/* отступ от нижней границы родительского меню */
+  background-color: #D4E6F8;/* цвет фона */
+  display: none;/* прячем */
+  padding: 3px 12px;/* поля (верхний-нижний, правый-левый) */
+  border-radius: 7px;/* радиус скругления углов рамки */
+  box-shadow: 1px 1px 5px darkgrey;/* тень блока (смещения по X,Y, размытие и цвет) */
 }
-#top_menu>ul,
-#top_menu .submenu{
-  padding: 0px;
+#top_menu .submenu a{/* ссылка подменю верхних меню */
+  color: #1C67A8;/* цвет текста */
+  padding: 2px 14px;/* поля (верхний-нижний, правый-левый) */
 }
-#top_menu .submenu{
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: -23px;
-  background-color: #D4E6F8;
-  display: none;
-  padding: 3px 12px;
-  border-radius: 7px;
-  box-shadow: 1px 1px 5px darkgrey;
+#top_menu .submenu li:hover>a,/* ссылка (под курсором) пункта подменю верхних меню */
+#top_menu .submenu a.current{/* ссылка текущего пункта подменю верхних меню */
+  color: #042F55;/* цвет текста */
 }
-#top_menu .submenu a{
-  color: #1C67A8;
-  padding: 2px 14px;
+#top_menu > .main_menu li:hover>.submenu{/* подменю пункта под курсором в верхних меню */
+  display: block;/* отображение элемента как блочного */
 }
-#top_menu .submenu li:hover>a,
-#top_menu .submenu a.current{
-  color: #042F55;
+#middle{/* середина каркаса страницы */
+  clear: both;/* выключение обтекания (плавания) */
 }
-#top_menu > .main_menu li:hover>.submenu{
-  display: block;
+#sidebar{/* боковая панель */
+  margin-top: 90px;/* верхний внешний отступ */
+  width: 200px;/* ширина */
+  float: left;/* плавающий (слева) элемент */
+  border: 10px solid #8AC1E9;/* рамка (толщина, тип, цвет) */
+  border-left: none;/* без левой рамки */
+  background-color: white;/* цвет фона */
+  border-radius: 0px 100px 100px 0px;/* радиус скругления углов */
+  padding: 35px 0px;/* поля (верхний-нижний, правый-левый) */
+  min-height: 233px;/* минимальная высота */
 }
-#middle{
-  clear: both;
-}
-#sidebar{
-  margin-top: 90px;
-  width: 200px;
-  float: left;
-  border: 10px solid #8AC1E9;
-  border-left: none;
-  background-color: white;
-  border-radius: 0px 100px 100px 0px;
-  padding: 35px 0px;
-  min-height: 233px;
-}
-#sidebar > h2{
+#sidebar > h2{/* название текущего пункта главного меню в сайдбаре */
+  /* параметры (цвет, картинка, расположение, повторение) фона */
   background: #74B9EC url("../img/curr_page_header_bg_c.png") top left repeat-x;
-  text-align: right;
-  padding: 2px 2px 2px;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 57px;
-  text-transform: uppercase;
-  color: rgb(255,255,255);
-  margin: 0px 30px 0px 15px;
-  position: relative;
-  vertical-align: middle;
+  text-align: right;/* выравнивание текста */
+  padding: 2px 2px 2px;/* поля (верхний, правый-левый, нижний) */
+  font-size: 20px;/* размер шрифта */
+  font-weight: normal;/* нормальное (не жирный, не курсивный) начертание шрифта */
+  line-height: 57px;/* высота строки */
+  text-transform: uppercase;/* все буквы заглавные */
+  color: rgb(255,255,255);/* цвет текста */
+  margin: 0px 30px 0px 15px;/* внешние отступы */
+  position: relative;/* относительное позиционирование */
+  vertical-align: middle;/* вертикальное выравнивание (по-центру) */
 }
-#sidebar > h2:hover{
+#sidebar > h2:hover{/* название (под курсором) текущего пункта главного меню в сайдбаре */
+  /* множественная тень (здесь используется для эффекта свечения) */
   text-shadow: 0px 0px 3px white, 0px 0px 5px white, 0px 0px 9px white, 0px 0px 15px white;
 }
+/* боковые скругленные (без CSS3) части блока-название текущего пункта главного меню в сайдбаре*/
 #sidebar > h2:before,
 #sidebar > h2:after{
-  content: "";
-  display: block;
-  position: absolute;
-  height: 61px;
-  width: 5px;
-  top: 0px;
-  background-repeat: no-repeat;
-  background-color: transparent;
+  content: "";/* содержимое псевдоэлемента */
+  display: block;/* отображение элемента как блочного */
+  position: absolute;/* абсолютное позиционирование */
+  height: 61px;/* высота */
+  width: 5px;/* ширина */
+  top: 0px;/* смещение элемента сверху */
+  background-repeat: no-repeat;/* повторение (отсутствует) фонового изображения */
+  background-color: transparent;/* цвет фона (прозрачный) */
 }
+/* левая боковая часть блока-название текущего пункта главного меню в сайдбаре*/
 #sidebar > h2:before{
-  left: -5px;
-  background-image: url("../img/curr_page_header_bg_l.png");
+  left: -5px;/* смещение элемента слева */
+  background-image: url("../img/curr_page_header_bg_l.png");/* фоновое изображение */
 }
+/* правая боковая часть блока-название текущего пункта главного меню в сайдбаре*/
 #sidebar > h2:after{
-  right: -5px;
-  background-image: url("../img/curr_page_header_bg_r.png");
+  right: -5px;/* смещение элемента справа */
+  background-image: url("../img/curr_page_header_bg_r.png");/* фоновое изображение */
 }
-#sidebar > ul{
-  list-style: none;
+#sidebar > ul{/* меню в сайдбаре */
+  list-style: none;/* элементы списка без маркеров */
 }
-#sidebar > ul.submenu{
-  border-bottom: 1px #83CAFD dotted;
-  padding-bottom: 35px;
-  padding-left: 100px;
-  position: relative;
+#sidebar > ul.submenu{/* подменю в сайдбаре */
+  border-bottom: 1px #83CAFD dotted;/* нижняя рамка */
+  padding-bottom: 35px;/* нижнее поле */
+  padding-left: 100px;/* левое поле */
+  position: relative;/* относительное позиционирование */
 }
-#sidebar > ul.submenu:after{
-  content:"Quick menu";
-  position: absolute;
-  font-size: 11px;
-  font-weight: bold;
-  height: 20px;
-  bottom: -25px;
-  right: 5px;
-  color: #8ac1e9;
+#sidebar > ul.submenu:after{/* псевдоэлемент для подписи быстрого меню сайдбара */
+  content:"Quick menu";/* содержимое псевдоэлемента */
+  position: absolute;/* абсолютное позиционирование */
+  font-size: 11px;/* размер шрифта */
+  font-weight: bold;/* жирный шрифт */
+  height: 20px;/* высота */
+  bottom: -25px;/* смещение элемента снизу */
+  right: 5px;/* смещение элемента справа */
+  color: #8ac1e9;/* цвет текста */
 }
-#sidebar > ul.submenu li a{
-  color: #7b7b7b;
-  text-decoration: none;
+#sidebar > ul.submenu li a{/* ссылка подменю сайдбара */
+  color: #7b7b7b;/* цвет текста */
+  text-decoration: none;/* текст без оформления (без подчеркивания) */
 }
-#sidebar > ul.submenu li.current a{
-  color: #1c67a8;
-  position: relative;
+#sidebar > ul.submenu li.current a{/* ссылка текущего пункта подменю сайдбара */
+  color: #1c67a8;/* цвет текста */
+  position: relative;/* относительное позиционирование */
 }
-#sidebar > ul.submenu li.current a:before{
-  position: absolute;
-  content: "";
-  left: -14px;
-  top: 8px;
-  width:10px;
-  display: block;
-  height: 0px;
-  border-top: 2px solid #1c67a8;
+#sidebar > ul.submenu li.current a:before{/* маркер текущего пункта подменю сайбара */
+  position: absolute;/* абсолютное позиционирование */
+  content: "";/* содержимое псевдоэлемента */
+  left: -14px;/* смещение элемента слева */
+  top: 8px;/* смещение элемента сверху */
+  width: 10px;/* ширина */
+  display: block;/* отображение элемента как блочного */
+  height: 0px;/* высота */
+  border-top: 2px solid #1c67a8;/* верхняя рамка */
 }
-#sidebar > ul.quickmenu{
-  padding: 60px 0px 35px 90px;
-  position: relative;
-  min-height: 105px;
-  overflow: hidden;
+#sidebar > ul.quickmenu{/* быстрое меню сайдбара */
+  padding: 60px 0px 35px 90px;/* поля */
+  position: relative;/* относительное позиционирование */
+  min-height: 105px;/* минимальная высота */
+  overflow: hidden;/* спрятать переполнение содержимого */
 }
-#sidebar > ul.quickmenu:before{
-  content: "";
-  border: 15px #cce5f8 solid;
-  border-radius: 85px;
-  position: absolute;
-  top: 15px;
-  left: -85px;
-  height: 140px;
-  width: 140px;
+#sidebar > ul.quickmenu:before{/* декоративная дуга быстрого меню сайдбара */
+  content: "";/* содержимое псевдоэлемента */
+  border: 15px solid #cce5f8;/* рамка (толщина, тип, цвет) */
+  position: absolute;/* абсолютное позиционирование */
+  top: 15px;/* смещение элемента сверху */
+  left: -85px;/* смещение элемента слева */
+  height: 140px;/* высота */
+  width: 140px;/* ширина */
+  border-radius: 85px;/* радиус скругления углов */
 }
-#sidebar > ul.quickmenu a{
-  color: #8ec9f3;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-#content{
-  margin-left: 150px;
-}
-#page_slogan{
-  height: 180px;
-  padding: 33px 0px 0px;
-  text-align: center;
-  overflow: hidden;
-}
-#content .breadcrambs{
-  float: right;
-}
-#content .breadcrambs *,
-#page_title>.description{
-  font-size: 12px;
-}
-#content .breadcrambs li:before,
-#content .breadcrambs a{
-  font-weight: normal;
-  color: #ADADAD;
-  text-decoration: none;
-}
-#content .breadcrambs a:hover{
-  text-decoration: underline;
-}
-#content .breadcrambs li{
-  display: inline-block;
-  font-weight: bold;
-  color: #676767;
+#sidebar > ul.quickmenu a{/* ссылки быстрого меню сайдбара */
+  color: #8ec9f3;/* цвет текста */
+  font-size: 12px;/* размер шрифта */
+  text-decoration: none;/* текст без подчеркивания */
 }
 
-#content .breadcrambs li:before{
-  content: ">";
-  padding: 0px 5px 0px 2px;
-  font-size: 14px;
+#content{/* блок содержимого страницы */
+  margin-left: 150px;/* внешний отступ слева */
 }
-#content .breadcrambs li:first-child:before{
-  content: "";
+#page_slogan{/* девиз страницы */
+  height: 180px;/* высота */
+  padding: 33px 0px 0px;/* поля (верхний, правый-левый, нижний) */
+  text-align: center;/* выравнивание текста */
+  overflow: hidden;/* спрятать переполнение содержимого */
 }
-#page_title{
-  background: url("../img/page_title_bg.png") left top no-repeat;
-  padding-left: 10px;
-  margin: 0px 0px 10px 80px;
+#content .breadcrambs{/* хлебные крошки */
+  float: right;/* плавающий (справа) элемент */
 }
-#page_title h2{
-  font-size: 16px;
-  line-height: 16px;
-  padding: 2px 0px;
-  margin: 2px 0px;
-  color: #50504F;
+#content .breadcrambs *,/* все вложенные в хлебные крошки элементы */
+#page_title>.description{/* описание в заголовке страницы */
+  font-size: 12px;/* размер шрифта */
 }
-#page_title .description{
-  color: #777;
+#content .breadcrambs li:before,/* разделитель хлебных крошек */
+#content .breadcrambs a{/* ссылки хлебных крошек */
+  font-weight: normal;/* нормальное (не жирный, не курсивный) начертание шрифта */
+  color: #ADADAD;/* цвет текста */
+  text-decoration: none;/* текст без подчеркивания */
 }
-#main_content{
-  border: 10px #84BDE7 solid;
-  border-radius: 100px;
-  padding: 40px 30px 25px 75px;
-  margin-bottom: 50px;
+#content .breadcrambs a:hover{/* ссылка (под курсором) хлебных крошек */
+  text-decoration: underline;/* текст с подчеркиванием */
 }
-#main_content h1{
-  margin: 0px 0px 30px;
-  text-transform: uppercase;
-  font-size: 56px;
-  line-height: 56px;
+#content .breadcrambs li{/* каждая хлебна крошка */
+  display: inline-block;/* отображение элемента как строчно-блочного */
+  font-weight: bold;/* жирный шрифт */
+  color: #676767;/* цвет текста */
+}
+
+#content .breadcrambs li:before{/* разделитель хлебных крошек */
+  content: ">";/* содержимое псевдоэлемента */
+  padding: 0px 5px 0px 2px;/* поля */
+  font-size: 14px;/* размер шрифта */
+}
+#content .breadcrambs li:first-child:before{/* нулевой разделитель хлебных крошек */
+  content: "";/* содержимое псевдоэлемента */
+}
+#page_title{/* заголовок страницы */
+  background: url("../img/page_title_bg.png") left top no-repeat;/* параметры фона */
+  padding-left: 10px;/* левое поле */
+  margin: 0px 0px 10px 80px;/* внешние отступы */
+}
+#page_title h2{/* название в заголовке страницы */
+  font-size: 16px;/* размер шрифта */
+  line-height: 16px;/* высота строки */
+  padding: 2px 0px;/* поля (верхний-нижний, правый-левый) */
+  margin: 2px 0px;/* внешние отступы */
+  color: #50504F;/* цвет текста */
+}
+#page_title .description{/* описание в заголовке страницы */
+  color: #777;/* цвет текста */
+}
+#main_content{/* основное содержимое страницы */
+  border: 10px #84BDE7 solid;/* рамка (толщина, тип, цвет) */
+  border-radius: 100px;/* радиус скругления углов */
+  padding: 40px 30px 25px 75px;/* поля */
+  margin-bottom: 50px;/* нижний внешний отступ */
+}
+#main_content h1{/* название страницы */
+  margin: 0px 0px 30px;/* внешние отступы */
+  text-transform: uppercase;/* все буквы заглавные */
+  font-size: 56px;/* размер шрифта */
+  line-height: 56px;/* высота строки */
+  /* параметры отражения для разных браузеров */
   -webkit-box-reflect: below -19px
     -webkit-gradient(linear, left top, left bottom, 
     from(transparent), to(rgba(255, 255, 255, 0.14)));
@@ -286,268 +294,268 @@ body{
     gradient(linear, left top, left bottom, 
     from(transparent), to(rgba(255, 255, 255, 0.14)));
 }
-#bte{
-  padding-left: 315px;
-  min-height: 180px;
-  background: url("../img/wiki_earth.png") 50px 0px no-repeat;
-  position: relative;
-  margin-bottom: 10px;
+#bte{/* блок начального текста в основном содержимом */
+  padding-left: 315px;/* левое поле */
+  min-height: 180px;/* минимальная высота */
+  background: url("../img/wiki_earth.png") 50px 0px no-repeat;/* параметры фона */
+  position: relative;/* относительное позиционирование */
+  margin-bottom: 10px;/* нижний внешний отступ */
 }
-#bte:before{
-  content:"";
-  position: absolute;
-  top: 150px;
-  left: 210px;
-  display: block;
-  width:78px;
-  height: 50px;
-  background: url("../img/puzzle.png") no-repeat;
+#bte:before{/* стилизация (картинкой-пазлом) блока начального текста в основном содержимом */
+  content:"";/* содержимое псевдоэлемента */
+  position: absolute;/* абсолютное позиционирование */
+  top: 150px;/* смещение элемента сверху */
+  left: 210px;/* смещение элемента слева */
+  display: block;/* отображение элемента как блочного */
+  width: 78px;/* ширина */
+  height: 50px;/* высота */
+  background: url("../img/puzzle.png") no-repeat;/* параметры фона */
 }
 #main_content h1,
 #bte h2{
-  color: #65a7d7;
+  color: #65a7d7;/* цвет текста */
 }
 #bte h2{
-  font-weight: normal;
+  font-weight: normal;/* нормальное (не жирный, не курсивный) начертание шрифта */
 }
 #chronology .cb p,
 #bte p{
-  color: #808080;
-  font-size: 12px;
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  color: #808080;/* цвет текста */
+  font-size: 12px;/* размер шрифта */
+  text-align: justify;/* выравнивание текста (по-ширине) */
+  margin-top: 0px;/* верхний внешний отступ */
+  margin-bottom: 5px;/* нижний внешний отступ */
 }
 #bte p{
-  text-indent: 20px;
+  text-indent: 20px;/* красная строка */
 }
 #chronology{
-  border: 1px solid #c1c1c1;
-  padding: 2%;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 10px;
+  border: 1px solid #c1c1c1;/* рамка (толщина, тип, цвет) */
+  padding: 2%;/* поля */
+  border-radius: 10px;/* радиус скругления углов */
+  overflow: hidden;/* спрятать переполнение содержимого */
+  margin-bottom: 10px;/* нижний внешний отступ */
 }
 #chronology .filter,
 #chronology .cb{
-  width: 45%;
-  margin: 2%;
-  float: left;
-  position: relative;
+  width: 45%;/* ширина */
+  margin: 2%;/* внешние отступы */
+  float: left;/* плавающий (слева) элемент */
+  position: relative;/* относительное позиционирование */
 }
 #chronology .cb:before{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  color: #c7c7c7;
-  font-size: 40px;
-  line-height: 40px;
+  position: absolute;/* абсолютное позиционирование */
+  top: 0px;/* смещение элемента сверху */
+  left: 0px;/* смещение элемента слева */
+  color: #c7c7c7;/* цвет текста */
+  font-size: 40px;/* размер шрифта */
+  line-height: 40px;/* высота строки */
 }
 #cb01:before{
-  content: "01";
+  content: "01";/* содержимое псевдоэлемента */
 }
 #cb02:before{
-  content: "02";
+  content: "02";/* содержимое псевдоэлемента */
 }
 #cb03:before{
-  content: "03";
+  content: "03";/* содержимое псевдоэлемента */
 }
 #cb04:before{
-  content: "04";
+  content: "04";/* содержимое псевдоэлемента */
 }
 #chronology .cb > *{
-  margin-left: 46px;
+  margin-left: 46px;/* левый внешний отступ */
 }
 #chronology .cb:before,
 #chronology .cb .name{
-  color: #c7c7c7;
+  color: #c7c7c7;/* цвет текста */
 }
 #chronology .cb .name{
-  font-size: 12px;
+  font-size: 12px;/* размер шрифта */
 }
 #chronology .cb .name_translation{
-  color: #5299cd;
-  font-size: 18px;
+  color: #5299cd;/* цвет текста */
+  font-size: 18px;/* размер шрифта */
 }
 #chronology .cb button{
-  position: absolute;
-  right: 0px;
-  top: 13px;
-  background-color: #8AC1E9;
-  color: white;
-  border: none;
-  padding: 0px 5px 3px;
-  border-radius: 3px;
+  position: absolute;/* абсолютное позиционирование */
+  right: 0px;/* смещение элемента справа */
+  top: 13px;/* смещение элемента сверху */
+  background-color: #8AC1E9;/* цвет фона */
+  color: white;/* цвет текста */
+  border: none;/* без рамки */
+  padding: 0px 5px 3px;/* поля (верхний, правый-левый, нижний) */
+  border-radius: 3px;/* радиус скругления углов */
 }
 #chronology .cb button:before{
-  content: "> ";
-  font-size: 10px;
+  content: "> ";/* содержимое псевдоэлемента */
+  font-size: 10px;/* размер шрифта */
 }
 #chronology .cb button:hover{
-  color: #5c5c5c;
-  cursor: pointer;
+  color: #5c5c5c;/* цвет текста */
+  cursor: pointer;/* курсор мыши */
 }
 #chronology .filter{
-  background-color: #f1f5f7;
-  border: 1px solid #cfdee5;
-  padding: 3px 0px;
-  text-align: center;
-  line-height: 12px;
+  background-color: #f1f5f7;/* цвет фона */
+  border: 1px solid #cfdee5;/* рамка (толщина, тип, цвет) */
+  padding: 3px 0px;/* поля (верхний-нижний, правый-левый) */
+  text-align: center;/* выравнивание текста */
+  line-height: 12px;/* высота строки */
 }
 #chronology .filter a{
-  font-size: 12px;
-  text-decoration: none;
-  color: #82919C;
-  margin: 0px 7px;
+  font-size: 12px;/* размер шрифта */
+  text-decoration: none;/* текст без подчеркивания */
+  color: #82919C;/* цвет текста */
+  margin: 0px 7px;/* внешние отступы */
 }
 #worktime{
-  overflow: hidden;
+  overflow: hidden;/* спрятать переполнение содержимого */
 }
 #worktime .name{
-  float: left;
-  width: 200px;
-  padding: 50px 5px 10px 30px;
-  color: #8ac1e9;
-  font-weight: bold;
-  font-size: 14px;
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
+  float: left;/* плавающий (слева) элемент */
+  width: 200px;/* ширина */
+  padding: 50px 5px 10px 30px;/* поля */
+  color: #8ac1e9;/* цвет текста */
+  font-weight: bold;/* жирный шрифт */
+  font-size: 14px;/* размер шрифта */
+  position: relative;/* относительное позиционирование */
+  background-color: transparent;/* цвет фона (прозрачный)*/
 }
 #worktime .name:after{
-  content: "?";
-  position: absolute;
-  right: 40px;
-  top: -20px;
-  color: #e3e3e3;
-  font-size: 150px;
-  font-weight: bold;
-  z-index: -1;
+  content: "?";/* содержимое псевдоэлемента */
+  position: absolute;/* абсолютное позиционирование */
+  right: 40px;/* смещение элемента справа */
+  top: -20px;/* смещение элемента сверху */
+  color: #e3e3e3;/* цвет текста */
+  font-size: 150px;/* размер шрифта */
+  font-weight: bold;/* жирный шрифт */
+  z-index: -1;/* расположение по оси Z */
+  /* трансформация блока (поворот) для разных браузеров */
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
   transform: rotate(25deg);
 }
 #worktime .description{
-  overflow: hidden;
+  overflow: hidden;/* спрятать переполнение содержимого */
 }
 #worktime .description p{
-  color: #686868;
-  font-size: 14px;
+  color: #686868;/* цвет текста */
+  font-size: 14px;/* размер шрифта */
 }
 #worktime .description p.work_relax{
-  color: #787878;
-  font-size: 13px;
+  color: #787878;/* цвет текста */
+  font-size: 13px;/* размер шрифта */
 }
 #worktime .time_intervals th,
 #worktime .time_intervals td{
-  color: #9ac9ec;
-  text-align: left;
-  font-size: 15px;
+  color: #9ac9ec;/* цвет текста */
+  text-align: left;/* выравнивание текста */
+  font-size: 15px;/* размер шрифта */
 }
 #deps{
-  text-align: center;
+  text-align: center;/* выравнивание текста */
 }
 #deps table{
-  border-collapse: collapse;
-  margin: 5px auto;
+  border-collapse: collapse;/* убрать расстояния между ячейками таблицы (указывается для таблицы) */
+  margin: 5px auto;/* внешние отступы (центрирование таблицы) */
 }
 #deps table td,
 #deps table th{
-  text-align: center;
-  font-size: 12px;
-  vertical-align: middle;
+  text-align: center;/* выравнивание текста */
+  font-size: 12px;/* размер шрифта */
+  vertical-align: middle;/* вертикальное выравнивание (по-центру) */
 }
 #deps table thead th{
-  background-color: #65a7d7;
-  color: white;
-  border-left: 1px solid white;
-  padding: 2px 10px;
+  background-color: #65a7d7;/* цвет фона */
+  color: white;/* цвет текста */
+  border-left: 1px solid white;/* левая рамка */
+  padding: 2px 10px;/* поля (верхний-нижний, правый-левый) */
 }
 #deps table tbody td{
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;/* нижняя рамка */
 }
 #deps table tbody tr:hover td,
 #deps table tbody th > span{
-  background-color: #dceaf9;
-  color: #65a7d7;
+  background-color: #dceaf9;/* цвет фона */
+  color: #65a7d7;/* цвет текста */
 }
 #deps table tbody th > span{
-  display: block;
-  text-align: right;
-  position: relative;
-  border-radius: 5px;
-  top:1px;
-  padding: 5px;
+  display: block;/* отображение элемента как блочного */
+  text-align: right;/* выравнивание текста */
+  position: relative;/* относительное позиционирование */
+  border-radius: 5px;/* радиус скругления углов */
+  top: 1px;/* смещение элемента сверху */
+  padding: 5px;/* поля */
 }
 #deps table tbody th > span:before{
-  display: block;
-  color: white;
-  text-align: left;
+  display: block;/* отображение элемента как блочного */
+  color: white;/* цвет текста */
+  text-align: left;/* выравнивание текста */
 }
 #deps table tbody .tr01 th > span:before{
-  content: "01";
+  content: "01";/* содержимое псевдоэлемента */
 }
 #deps table tbody .tr02 th > span:before{
-  content: "02";
+  content: "02";/* содержимое псевдоэлемента */
 }
 #deps table tbody .tr03 th > span:before{
-  content: "03";
+  content: "03";/* содержимое псевдоэлемента */
 }
 #deps table tbody .tr04 th > span:before{
-  content: "04";
+  content: "04";/* содержимое псевдоэлемента */
 }
 #deps table body td.email{
-  text-align: left;
-  padding-left: 30px;
+  text-align: left;/* выравнивание текста */
+  padding-left: 30px;/* левое поле */
 }
 /* Footer */
 #footer{
-  clear: both;
+  clear: both;/* выключение обтекания (плавания) */
 }
 #footer .common_menu{
-  margin: 0px;
+  margin: 0px;/* внешние отступы */
 }
 #footer .common_menu li{
-  display: inline-block;
-  border-left: 1px solid #c7c7c7;
-  padding: 0px 10px;
-  height: 7px;
+  display: inline-block;/* отображение элемента как строчно-блочного */
+  border-left: 1px solid #c7c7c7;/* левая рамка */
+  padding: 0px 10px;/* поля (верхний-нижний, правый-левый) */
+  height: 7px;/* высота */
 }
 #footer .common_menu li:first-child{
-  border-left: none;
+  border-left: none;/* без левой рамки */
 }
 #footer .common_menu li:last-child{
-  padding-right: 0px;
+  padding-right: 0px;/* правое поле */
 }
 #footer .common_menu a{
-  text-decoration: none;
-  display: block;
-  position: relative;
-  top: -4px;
+  text-decoration: none;/* текст без подчеркивания */
+  display: block;/* отображение элемента как блочного */
+  position: relative;/* относительное позиционирование */
+  top: -4px;/* смещение элемента сверху */
 }
 
-#footer .contacts{
-  color: #8c9cac;
-  font-size: 11px;
+#footer .contacts{/* блок контактов в подвале */
+  color: #8c9cac;/* цвет текста */
+  font-size: 11px;/* размер шрифта */
 }
 #footer .contacts .phone:before{
-  content: "TEL: ";
+  content: "TEL: ";/* содержимое псевдоэлемента */
 }
 #footer .contacts .fax:before{
-  content: "FAX: ";
+  content: "FAX: ";/* содержимое псевдоэлемента */
 }
 #footer .contacts .phone:before,
 #footer .contacts .fax:before{
-  font-weight: bold;  
+  font-weight: bold;/* жирный шрифт */
 }
 #footer .common_menu,
 #footer .low,
 #footer .contacts{
-  text-align: right;
+  text-align: right;/* выравнивание текста */
 }
 #footer .low{
-  text-transform: uppercase;
-  color: #b1bac3;
-  font-size: 10px;
-  font-weight: bold;
+  text-transform: uppercase;/* все буквы заглавные */
+  color: #b1bac3;/* цвет текста */
+  font-size: 10px;/* размер шрифта */
+  font-weight: bold;/* жирный шрифт */
 }
