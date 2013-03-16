@@ -333,9 +333,14 @@ a img{/* все картинки-ссылки */
   border: 1px solid #c1c1c1;/* рамка (толщина, тип, цвет) */
   padding: 2%;/* поля */
   border-radius: 10px;/* радиус скругления углов */
-  overflow: hidden;/* спрятать переполнение содержимого */
+  overflow: hidden; /* спрятать переполнение содержимого */
   margin-bottom: 10px;/* нижний внешний отступ */
 }
+/*#chronology:after{
+  content: "";
+  clear: both;
+  display: block;
+}*/
 #chronology .filter,
 #chronology .cb{
   width: 45%;/* ширина */
