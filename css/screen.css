@@ -163,10 +163,11 @@ a img{/* все картинки-ссылки */
   list-style: none;/* элементы списка без маркеров */
 }
 #sidebar > ul.submenu{/* подменю в сайдбаре */
-  border-bottom: 1px #83CAFD dotted;/* нижняя рамка */
-  padding-bottom: 35px;/* нижнее поле */
+  border: 1px #83CAFD dotted;/* нижняя рамка */
+/*  padding-bottom: 35px;*/ /* нижнее поле */
   padding-left: 100px;/* левое поле */
   position: relative;/* относительное позиционирование */
+  overflow: hidden;
 }
 #sidebar > ul.submenu:after{/* псевдоэлемент для подписи быстрого меню сайдбара */
   content:"Quick menu";/* содержимое псевдоэлемента */

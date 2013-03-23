@@ -19,6 +19,7 @@ var f2 = function(){
   var j = "Валерий";
   console.log(j+" спит ...");
 }
+//f1();
 //f2();
 //console.log(j);
 //f1();
