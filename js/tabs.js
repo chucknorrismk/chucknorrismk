@@ -12,5 +12,6 @@ $('.tab').click(function(){
           .animate({'top':'-=500px'});
 });
 $(document).on("click", ".move",function(){
-  this.parentNode.removeChild(this);
+  //this.parentNode.removeChild(this); // удаление на native javascript
+  $(this).remove(); // удаление на jQuery
 });
