@@ -1,3 +1,6 @@
+.tabs{
+  position: relative;
+}
 .tab{
   display: inline-block;
   background: lightgreen;
@@ -17,7 +20,7 @@
   position: relative;
 }
 .tab-content{
-  position: absolute;
+  /*position: absolute;*/
   background-color: yellow;
   display: none;
 }
@@ -32,3 +35,27 @@
   color: white;
 }
 
+.dc{
+  clear: both;
+}
+
+.ad-banner{
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+  border: 5px solid lightskyblue;
+  position: relative;
+}
+.ad-banner-move{
+  padding: 0px;
+  margin: 0px;
+  width: 500px;
+  position: relative;
+}
+.ad-banner li{
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  padding: 0px;
+  margin: 0px;
+}

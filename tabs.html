@@ -4,8 +4,12 @@
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery/ui/theme/le-frog/jquery.ui.all.css" />
+    
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.1.1.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.10.2.custom.js"></script>
+    <script type="text/javascript" src="js/jquery/ui/jquery.ui.sortable.js"></script>
   </head>
   <body>
     <div class="tabs">
@@ -26,6 +30,35 @@
         </div>
       </div>
     </div>
+    <div class="dc">
+      <input type="button" value="Получить"/>
+      <div id="data">Здесь будут отображаться наши данные</div>
+    </div>
+    <input type="button" class="ad-banner-pause" value="Пауза" />
+    <input type="button" class="ad-banner-start" value="Поехали" />
+    <div class="ad-banner">
+      <ul class="ad-banner-move">
+        <li class="ad-banner-item">
+          Реклама 1
+        </li><li class="ad-banner-item">
+          Реклама 2
+        </li><li class="ad-banner-item">
+          Реклама 3
+        </li><li class="ad-banner-item">
+          Реклама 4
+        </li><li class="ad-banner-item">
+          Реклама 5
+        </li>
+      </ul>
+    </div>
+    <ul class="ui-sortable">
+      <li class="ui-state-default">Элемент 1</li>
+      <li class="ui-state-default">Элемент 2</li>
+      <li class="ui-state-default">Элемент 3</li>
+      <li class="ui-state-default">Элемент 4</li>
+      <li>Элемент 5</li>
+      <li class="ui-state-default">Элемент 6</li>
+    </ul>
     <script type="text/javascript" src="js/tabs.js"></script>
   </body>
 </html>
