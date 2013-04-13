@@ -7,99 +7,9 @@
   </head>
   <body>
     <div id="wrapper">
-      <div id="header">
-        <a href="/" class="logo" style="border-color:green;">
-          <img src="img/logo.png" alt="onPLUS" /> 
-        </a>
-        <div id="top_menu">
-          <ul class="common_menu">
-            <li>
-              <a href="#">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Login
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Customercenter
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Sitemap
-              </a>
-            </li>
-          </ul>
-          <ul class="main_menu">
-            <li class="current"><a href="#">Company</a>
-              <!--Zen Coding -> ul.submenu>li*7>a[href="#"]{news$}-->
-              <ul class="submenu">
-                <li><a href="#">News</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="#">news4</a></li>
-                <li><a href="#">news5</a></li>
-                <li><a href="#">news6</a></li>
-                <li><a href="#">news7</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Gallery</a>
-              <ul class="submenu">
-                <li><a href="#">Gallery1</a></li>
-                <li><a href="#">Gallery2</a>
-                  <ul class="submenu">
-                    <li><a href="#">Gallery2.1</a></li>
-                    <li><a href="#">Gallery2.2</a></li>
-                    <li><a href="#">Gallery2.3</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Gallery3</a></li>
-                <li><a href="#">Gallery4</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Price List</a></li>
-            <li><a href="#" class="strong">Тестовые страницы</a>
-              <ul class="submenu">
-                <li><a href="menu_css.html">CSS-меню</a></li>
-                <li><a href="tabs.html">Вкладки +</a></li>
-                <li><a href="index-first.html">Тестовая страница</a></li>
-                <li><a href="test.html" title="Счетчик времени обратного отсчета">Счетчик времени</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <?php include('include/header.php'); ?>
       <div id="middle">
-        <div id="sidebar">
-          <h2>Company</h2>
-          <ul class="submenu">
-            <li>
-              <a href="#">News</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li class="current">
-              <a href="#">Contacts</a>
-            </li>
-          </ul>
-          <ul class="quickmenu">
-            <li>
-              <a href="#">Quick News</a>
-            </li>
-            <li>
-              <a href="#">Quick About</a>
-            </li>
-            <li class="current">
-              <a href="#">Quick Contacts</a>
-            </li>
-          </ul>
-        </div>
+        <?php include('include/sidebar.php'); ?>
         <div id="content">
           <div id="page_slogan">
             <img src="img/hotinplus.png" />
@@ -236,37 +146,7 @@
           </div>
         </div>
       </div>
-      <div id ="footer">
-        <ul class="common_menu">
-          <li>
-            <a href="#">
-              Корейское слово
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Contact Us
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Sitemap
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              English
-            </a>
-          </li>
-        </ul>
-        <div class="contacts">
-          <span class="phone">1566-5099</span>
-          <span class="fax">052-271-7921</span>
-        </div>
-        <div class="low">
-          Copyright (&copy;) 2013 Inplus. All Rights Reserved.
-        </div>
-      </div>
+      <?php include ('include/footer.php');?>
     </div>
     <script type="text/javascript" src="js/test.js"></script>
   </body>
