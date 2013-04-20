@@ -8,7 +8,8 @@
     
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.1.1.js"></script>
-    <script type="text/javascript" src="js/jquery/jquery-ui-1.10.2.custom.js"></script>
+    <!--script type="text/javascript" src="js/jquery/ui/minified/jquery-ui.custom.min.js"></script-->
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script type="text/javascript" src="js/jquery/ui/jquery.ui.sortable.js"></script>
   </head>
   <body>

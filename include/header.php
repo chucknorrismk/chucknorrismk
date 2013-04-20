@@ -3,30 +3,9 @@
           <img src="img/logo.png" alt="onPLUS" /> 
         </a>
         <div id="top_menu">
-          <ul class="common_menu">
-            <li>
-              <a href="#">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Login
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Customercenter
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Sitemap
-              </a>
-            </li>
-          </ul>
+          <?php include ('include/common_menu.php'); ?>
           <ul class="main_menu">
-            <li class="current"><a href="#">Company</a>
+            <li class="current"><a href="company.php">Company</a>
               <!--Zen Coding -> ul.submenu>li*7>a[href="#"]{news$}-->
               <ul class="submenu">
                 <li><a href="#">News</a></li>
@@ -38,8 +17,8 @@
                 <li><a href="#">news7</a></li>
               </ul>
             </li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Gallery</a>
+            <li><a href="forum.php">Forum</a></li>
+            <li><a href="gallery.php">Gallery</a>
               <ul class="submenu">
                 <li><a href="#">Gallery1</a></li>
                 <li><a href="#">Gallery2</a>
@@ -56,10 +35,11 @@
             <li><a href="#">Price List</a></li>
             <li><a href="#" class="strong">Тестовые страницы</a>
               <ul class="submenu">
-                <li><a href="menu_css.html">CSS-меню</a></li>
-                <li><a href="tabs.html">Вкладки +</a></li>
-                <li><a href="index-first.html">Тестовая страница</a></li>
-                <li><a href="test.html" title="Счетчик времени обратного отсчета">Счетчик времени</a></li>
+                <li><a href="menu_css.php">CSS-меню</a></li>
+                <li><a href="tabs.php">Вкладки +</a></li>
+                <li><a href="index-first.php">Тестовая страница</a></li>
+                <li><a href="test_js.php" title="Счетчик времени обратного отсчета">Счетчик времени</a></li>
+                <li><a href="test.php" title="Тестирование возможностей PHP">Тестируем PHP</a></li>
               </ul>
             </li>
           </ul>

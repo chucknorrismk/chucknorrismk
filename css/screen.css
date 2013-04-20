@@ -45,7 +45,8 @@ a img{/* все картинки-ссылки */
 }
 .common_menu a{/* ссылки в общем меню */
   color: #b2b2b2;/* цвет текста */
-  font-size: 11px;/* размер шрифта */
+  font-size: 14px;/* размер шрифта */
+  padding: 1px 10px;
 }
 #top_menu .main_menu{/* главное меню в верхних меню */
   /* устанавливаем ему относительное позиционирование, */
@@ -570,4 +571,18 @@ a img{/* все картинки-ссылки */
   color: #b1bac3;/* цвет текста */
   font-size: 10px;/* размер шрифта */
   font-weight: bold;/* жирный шрифт */
+}
+/* debug */
+#debug{
+  position: fixed;
+  right: -250px;
+  top: 100px;
+  width: 300px;
+  background-color: rgba(230,230,230,0.8);
+  border: 1px solid #bbb;
+  padding: 10px;
+  border-radius: 10px;
+}
+#debug:hover{
+  right: 0px;
 }

@@ -22,7 +22,9 @@ echo "<pre>";
 print_r($students);
 echo "</pre>";
 echo "<div>-----------------</div>";
+echo "<pre>";
 var_dump($students);
+echo "</pre>";
 ?>
   <?php if (count($students) > 0) { ?>
   <ul>
