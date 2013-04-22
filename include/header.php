@@ -35,11 +35,10 @@
             <li><a href="#">Price List</a></li>
             <li><a href="#" class="strong">Тестовые страницы</a>
               <ul class="submenu">
-                <li><a href="menu_css.php">CSS-меню</a></li>
-                <li><a href="tabs.php">Вкладки +</a></li>
-                <li><a href="index-first.php">Тестовая страница</a></li>
-                <li><a href="test_js.php" title="Счетчик времени обратного отсчета">Счетчик времени</a></li>
-                <li><a href="test.php" title="Тестирование возможностей PHP">Тестируем PHP</a></li>
+                <li><a href="client/menu_css.php">CSS-меню</a></li>
+                <li><a href="client/tabs.php">Вкладки +</a></li>
+                <li><a href="client/index-first.php">Тестовая страница</a></li>
+                <li><a href="client/test.php" title="Тестирование возможностей PHP">Тестируем PHP</a></li>
               </ul>
             </li>
           </ul>

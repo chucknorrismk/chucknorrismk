@@ -21,8 +21,6 @@ Table.border = 1;
 
 Row.removeChild(Cell2);
 
-var wtname = document.getElementById("wtname");
-wtname.parentNode.removeChild(wtname);
 // ---------------------------------------------
 var sidebar = document.getElementById("sidebar");
 //console.log(sidebar.childNodes[0].name);

@@ -39,20 +39,20 @@
   clear: both;
 }
 
-.ad-banner{
+.movement{
   width: 300px;
   height: 80px;
   overflow: hidden;
   border: 5px solid lightskyblue;
   position: relative;
 }
-.ad-banner-move{
+.movement-move{
   padding: 0px;
   margin: 0px;
   width: 500px;
   position: relative;
 }
-.ad-banner li{
+.movement li{
   display: inline-block;
   width: 100px;
   height: 80px;
