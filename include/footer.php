@@ -1,4 +1,7 @@
 <div id ="footer">
+  <span class="counter">
+    <?php echo @$_SESSION['counter'];?>
+  </span>
         <?php include ('include/common_menu.php'); ?>
         <div class="contacts">
           <span class="phone">1566-5099</span>

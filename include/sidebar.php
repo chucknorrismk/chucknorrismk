@@ -13,6 +13,7 @@
       <a href="#">Contacts</a>
     </li>
   </ul>
+  <?php include 'theme_form.php'; ?>
   <ul class="quickmenu">
     <li>
       <a href="#">Quick News</a>

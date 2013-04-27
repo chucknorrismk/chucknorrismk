@@ -1,12 +1,35 @@
 <?php //error_reporting(0);    ?>
-<?php require_once ('include/page.php'); ?>
+<?php 
+require_once './config.php';
+session_start();
+require_once 'include/user_auth.php';
+require_once ('include/page.php'); ?>
 <?php
 if (isset($_GET['page'])) {
   if (!isset($page[$_GET['page']])) {
     $_GET['page'] = '404';
+  }else{
+    if (
+            (isset($page[$_GET['page']]['role'])&&
+                isset($_SESSION['role'])&&
+                ($page[$_GET['page']]['role']<$_SESSION['role']))
+            ||
+            (isset($page[$_GET['page']]['role'])&&
+                !isset($_SESSION['role']))
+       ) {
+      $_GET['page'] = '403';
+    }
   }
 } else {
   $_GET['page'] = 'index';
+}
+?>
+<?php
+require_once 'include/theme.php';
+if(isset($_SESSION['counter'])){
+  $_SESSION['counter']++;
+}else{
+  $_SESSION['counter']=1;
 }
 ?>
 <!DOCTYPE html>
@@ -15,6 +38,7 @@ if (isset($_GET['page'])) {
     <title><?php echo isset($page[$_GET['page']]['title']) ? $page[$_GET['page']]['title'] : $page[$_GET['page']]['name']; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/screen.css" />
+    <?php include_once 'include/set_theme.php'; ?>
   </head>
   <body>
     <div id="wrapper">

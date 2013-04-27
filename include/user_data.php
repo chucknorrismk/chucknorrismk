@@ -1,0 +1,26 @@
+<?php
+$user['kristina']=array(
+    'pass'=>'orbakayte',
+    'role'=>ROLE_ADMINISTRATOR,
+    'name'=>'Кристина',
+    'avatar'=>'kristina.png',
+);
+$user['yuriy']=array(
+    'pass'=>'nikulin',
+    'role'=>ROLE_OPERATOR,
+    'name'=>'Юрий',
+    'avatar'=>'yuriy.png',
+);
+$user['anna']=array(
+    'pass'=>'karenina',
+    'role'=>ROLE_SCIENTIFIC_WORKER,
+    'name'=>'Аня',
+    'avatar'=>'anna.png',
+);
+$user['evgen']=array(
+    'pass'=>'onegin',
+    'role'=>ROLE_USER,
+    'name'=>'Жека',
+    'avatar'=>'evgen.png',
+);
+?>
