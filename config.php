@@ -7,5 +7,11 @@ define('ROLE_USER', 100);
 
 define('AVATAR_DIR', "img/avatar/");
 
+define('SERVER_NAME', "localhost");
+define('DB_NAME', "mc2013");
+define('USER', "mc2013");
+define('PASSWORD', "mc2013");
+
+
  
 ?>

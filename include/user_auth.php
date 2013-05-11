@@ -8,12 +8,14 @@ if(isset($_SESSION['role'])){//если пользователь авториз�
 }else{// пользователь не авторизован
   //если пользователь пытается авторизоваться
   if(isset($_POST['login'])&&isset($_POST['pass'])){
-    require_once 'user_data.php';
-    if(isset($user[$_POST['login']])&&
-            ($user[$_POST['login']]['pass']==$_POST['pass'])){
-      $_SESSION['role']=$user[$_POST['login']]['role'];
-      $_SESSION['user_name']=$user[$_POST['login']]['name'];
-      $_SESSION['user_avatar']=$user[$_POST['login']]['avatar'];
+    //require_once 'user_data.php';
+    $select_user = "SELECT role,name,avatar FROM  user WHERE (login = '{$_POST['login']}') AND (pass =  '{$_POST['pass']}')";
+    if(($result_select_user = mysql_query($select_user))&&
+            (mysql_num_rows($result_select_user)>0)){
+      $user = mysql_fetch_assoc($result_select_user);
+      $_SESSION['role']=$user['role'];
+      $_SESSION['user_name']=$user['name'];
+      $_SESSION['user_avatar']=$user['avatar'];
     }
   }
 }

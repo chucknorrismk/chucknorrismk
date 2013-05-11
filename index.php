@@ -1,6 +1,7 @@
 <?php //error_reporting(0);    ?>
 <?php 
 require_once './config.php';
+require_once './db_connect.php';
 session_start();
 require_once 'include/user_auth.php';
 require_once ('include/page.php'); ?>
