@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 11 2013 г., 19:45
+-- Время создания: Май 18 2013 г., 14:14
 -- Версия сервера: 5.5.24-log
 -- Версия PHP: 5.3.13
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `avatar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `user`
@@ -43,8 +43,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `login`, `pass`, `name`, `role`, `avatar`) VALUES
 (1, 'kristina', 'orbakayte', 'Кристина', 0, 'kristina.png'),
-(2, 'yuriy', 'gagarin', 'Юрий', 10, 'yuriy.png'),
-(3, 'anna', 'karenina', 'Аня', 30, 'anna.png');
+(3, 'anna', 'karenina', 'Анюта', 30, 'anna.png');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
