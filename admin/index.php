@@ -68,7 +68,7 @@ if (isset($_SESSION['role'])) {
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
     <script src="js/menu.js" type="text/javascript"></script>
-    
+
   </head>
   <body>
     <div class="container-fluid">
@@ -91,6 +91,11 @@ if (isset($_SESSION['role'])) {
                     <li><a href="?obj=user">Список пользователей</a></li>
                     <li><a href="?obj=user&action=add">Добавить пользователя</a></li>
                   </ul>
+                </li>
+              </ul>
+              <ul class="nav pull-right">
+                <li>
+                  <a href="/?logout">Выход</a>
                 </li>
               </ul>
             </div>
