@@ -12,6 +12,10 @@ define('DB_NAME', "mc2013");
 define('USER', "mc2013");
 define('PASSWORD', "mc2013");
 
+define('CONTROLLER_PATH', "controller/");
+define('MODEL_PATH', "model/");
+define('VIEW_PATH', "view/");
+define('ADMIN_AVATAR_DIR', "../img/avatar/");
 
- 
+
 ?>
