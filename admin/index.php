@@ -25,13 +25,13 @@ if (isset($_SESSION['role'])) {
             addAction();
             break;
           case 'insert':
-            insertAction(array_merge($_POST,$_FILES));
+            insertAction(array_merge($_POST, $_FILES));
             break;
           case 'edit':
             editAction($_GET['id']);
             break;
           case 'update':
-            updateAction(array_merge($_POST,$_FILES));
+            updateAction(array_merge($_POST, $_FILES));
             break;
           case 'delete':
             deleteAction($_GET['id']);
@@ -48,7 +48,8 @@ if (isset($_SESSION['role'])) {
     // TODO: вывод страницы по умоланию, например - информационная панель 
     $filename = CONTROLLER_PATH . "default.php";
     if (file_exists($filename)) {
-      renderTemplate($filename);
+      require_once $filename;
+      indexAction();
     } else {
       echo "Файл {$filename} НЕ найден!!!";
     }
@@ -62,29 +63,52 @@ if (isset($_SESSION['role'])) {
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
-    <style>
-      #header,#footer{
-        background-color: #1c67a8;
-        color: white;
-      }
-      #middle{
-        width: 1000px;
-        margin: 5px auto;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+    
   </head>
   <body>
-    <div id="header">
-      Заголовок страницы
-    </div>
-    <div id="middle">
-      <?php
-      //include $template;
-      echo $content;
-      ?>
-    </div>
-    <div id="footer">
-      Подвал страницы
-    </div>
+    <div class="container-fluid">
+      <div id="header" class="row-fluid">
+        <div class="navbar navbar-static-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li>
+                  <a href="/admin">Информационная панель</a>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="#">
+                    Пользователи
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="?obj=user">Список пользователей</a></li>
+                    <li><a href="?obj=user&action=add">Добавить пользователя</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="middle" class="container row">
+          <div class="span12">
+            <?php
+            //include $template;
+            echo $content;
+            ?>
+          </div>
+        </div>
+        <div id="footer" class="row-fluid">
+          <div class="container">
+            Подвал страницы
+          </div>
+        </div>
+      </div>
   </body>
 </html>

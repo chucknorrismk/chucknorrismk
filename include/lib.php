@@ -6,7 +6,11 @@ function renderTemplate($filename,$data=array()) {
   }
   global $content;
   ob_start();
-  require $filename;
+  if (file_exists($filename)) {
+    require $filename;
+  }else{
+    echo "Файл {$filename} НЕ найден!";
+  }
   $content = ob_get_clean();
 }
 

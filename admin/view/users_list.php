@@ -1,5 +1,6 @@
+<legend>Пользователи</legend>
 <?php if ($users) { ?>
-  <table>
+  <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>
         <th><a href="?obj=user&action=add">Добавить</a></th><th>id</th><th>login</th><th>пароль</th><th>роль</th><th>Имя</th><th>avatar</th>
